@@ -125,7 +125,7 @@ class TestAccountService(TestCase):
 
     # ADD YOUR TEST CASES HERE ...
 
-    #Read Account
+    #Read Account on Service
     def test_get_account(self):
         account = self._create_accounts(1)[0]
         resp = self.client.get(
