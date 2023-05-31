@@ -158,7 +158,7 @@ class TestAccountService(TestCase):
         resp = self.client.delete(f"{BASE_URL}/{account.id}")
         self.assertEqual(resp.status_code, status.HTTP_204_NO_CONTENT)
     
-    #List account
+    #List account on service
     def test_get_account_list(self):
         self._create_accounts(5)
         resp = self.client.get(BASE_URL)
