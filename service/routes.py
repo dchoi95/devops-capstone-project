@@ -56,11 +56,9 @@ def create_accounts():
     return make_response(
         jsonify(message), status.HTTP_201_CREATED, {"Location": location_url}
     )
-
 ######################################################################
 # LIST ALL ACCOUNTS
 ######################################################################
-
 
 # ... place you code here to LIST accounts ...
 @app.route("/accounts", methods=["GET"])
@@ -70,11 +68,9 @@ def list_accounts():
     account_list = [account.serialize() for account in accounts]
     app.logger.info("Returning [%s] accounts", len(account_list))
     return jsonify(account_list), status.HTTP_200_OK
-
 ######################################################################
 # READ AN ACCOUNT
 ######################################################################
-
 
 # ... place you code here to READ an account ...
 @app.route("/accounts/<int:account_id>", methods=["GET"])
