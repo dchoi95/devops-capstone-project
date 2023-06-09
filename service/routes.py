@@ -62,7 +62,6 @@ def create_accounts():
 ######################################################################
 
 # ... place you code here to LIST accounts ...
-
 @app.route("/accounts", methods=["GET"])
 def list_accounts():
     app.logger.info("Request to list Accounts")
@@ -126,4 +125,5 @@ def check_content_type(media_type):
     abort(
         status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
         f"Content-Type must be {media_type}",
+
     )
